@@ -2,13 +2,13 @@ import json
 from datetime import datetime
 import argparse
 
-def read_file(file_path):
-    with open(file_path, 'r') as file:
+def read_file(file_name):
+    with open(file_name, 'r') as file:
         data = json.load(file)
     return data
 
-def write_json_file(file_path, data):
-    with open(file_path, 'w') as file:
+def write_json_file(file_name, data):
+    with open(file_name, 'w') as file:
         json.dump(data, file, indent=2)
 
 def parse_date(entry_date):
